@@ -131,7 +131,7 @@ const Page = (content) => {
                                 
                               <div className='w-full shadow-md rounded-xl'>
                                 <div id="defaultTabContent" className='bg-[#f8f0f0] p-7 rounded-3xl flex gap-9 items-center w-full'>
-                                  <div className='w-[10vw] h-[9vw] flex object-cover object-center overflow-hidden rounded-md'>
+                                  <div className='w-[600px] h-[140px] flex object-cover object-center overflow-hidden rounded-md'>
                                     <img className='flex object-cover object-center' src={items?.thumbnail || "/profiledummy.png"} width={500} height={500} alt="Picture of the author" />
                                   </div>
                                   <div className="rounded-lg dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
