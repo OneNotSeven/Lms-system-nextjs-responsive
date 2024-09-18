@@ -91,7 +91,7 @@ const Followinglist = () => {
                                 
                                     </div>
                                     <div>
-                                        <h2 className="text-xl font-semibold text-[#d42eeb] font-[Poppins]">Good Morning Alex</h2>
+                                        <h2 className="text-xl font-semibold text-[#d42eeb] font-[Poppins]">Welcome</h2>
                                         <p className="text-sm text-[#ae29c0] font-[Poppins]">Continue Your Journey And Achieve Your Target</p>
                                     </div>
                                 </div>
