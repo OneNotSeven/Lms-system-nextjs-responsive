@@ -63,7 +63,7 @@ transporter.sendMail(mailOptions, function(error, info){
   }
 });
        
- console.log(link)
+// console.log(link)
     return responsed;
 
     // return NextResponse.json({message:"verified",success:true},{status:200})
