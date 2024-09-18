@@ -48,7 +48,7 @@ const Pages = () => {
     fetchData();
   }, []);
   
-  console.log("rec", data);
+  // console.log("rec", data);
 
   return (
     <>
