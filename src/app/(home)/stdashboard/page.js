@@ -53,13 +53,13 @@ const Pages = () => {
   return (
     <>
       <div style={{    background: 'linear-gradient(140deg, #fce2ff14, #f7cefd29)'}} className='w-full flex flex-col gap-6'>
-        <div style={{background: 'linear-gradient(110deg, #e278ef, #ffa2f2)'}} className=' h-[180px] rounded-xl m-4 pl-4 text-[#1f1e1e] flex gap-8 '>
-          <div>
+        <div style={{background: 'linear-gradient(110deg, #e278ef, #ffa2f2)'}} className=' h-[180px] rounded-xl m-4 pl-4 text-[#1f1e1e] flex sm:gap-8 sm:flex-row justify-center sm:justify-start items-center flex-col'>
+          <div className='w-[126px] mr-8 sm:w-fit sm:mr-0'>
 
           <img src='clip-pics-of-animated-cartoons-8-removebg-preview.png' className=' mix-blend-luminosity filter drop-shadow-md shadow-purple-500' width={164} alt="Decorative" />
           </div>
           <div className='flex flex-col justify-center'>
-            <h1 className='text-[#fafafa] text-[36px] font-semibold font-[Poppins] '>
+            <h1 className='text-[#fafafa] md:text-[36px] text-[16px] sm:text-[24px] font-semibold font-[Poppins] '>
               Welcome To { ' '} <motion.span
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -70,12 +70,14 @@ const Pages = () => {
        {displayedText}
       </motion.span>
             </h1>
-            <span className='font-semibold text-white font-[poppins] tracking-wide '>Thunder of knowledge,wisdom and prosperity</span>
+            <span className='font-semibold text-white font-[poppins] tracking-wide text-[8px] sm:text-[16px] '>Thunder of knowledge,wisdom and prosperity</span>
           </div>
         </div>
         <div className='flex items-center gap-10'>
           
           <h2 className='text-2xl font-semibold text-[#d42eeb] ml-4 mt-3'>Recommendation</h2>
+          <div className='hidden sm:block'>
+
           <div style={{background: 'linear-gradient(110deg, #e278ef, #ffa2f2)'}} className=" flex gap-3 rounded-2xl px-4 h-fit py-1 items-center justify-center mt-3">
           <svg class="w-6 h-6 text-[#fff] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16 10 3-3m0 0-3-3m3 3H5v3m3 4-3 3m0 0 3 3m-3-3h14v-3"/>
@@ -83,12 +85,13 @@ const Pages = () => {
 
       <p  className="text-white text-sm font-medium font-[Poppins] ">suggestion based on your interest</p>
     </div>
+          </div>
 </div>
         
         <div className='flex gap-4 mt-5 justify-center items-center'>
-          {data.length>0?<div className='w-full'>
+          {data.length>0?<div className='w-full overflow-auto md:overflow-x-auto'>
            
-            <div className='flex gap-4 pl-4'>
+            <div className='flex flex-col sm:flex-row gap-4 pl-4'>
               {data.map((item, idx) => (
                 <Link key={idx} href={`/courses/${item.courseId}/${item?.videosrc[0]?._id}`} className='cursor-pointer'>
 
@@ -98,7 +101,7 @@ const Pages = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                     whileHover={{ scale: 1.05 }}
-                    className="rounded-lg overflow-hidden shadow-md border border-gray-200 dark:bg-gray-800 dark:border-gray-700 max-w-sm w-full sm:w-[300px] lg:w-[350px]"
+                    className="rounded-lg w- overflow-hidden shadow-md border border-gray-200 dark:bg-gray-800 dark:border-gray-700 max-w-sm w-full sm:w-[300px] lg:w-[350px]"
                   >
                     <div className='w-full h-[198px] overflow-hidden'>
                       <img
@@ -110,7 +113,7 @@ const Pages = () => {
                     <div className='p-5'>
                       <div className='flex flex-col gap-2'>
                         <div className='flex items-center justify-between'>
-                          <h5 className="text-lg font-bold text-[#d42eeb] dark:text-white capitalize">{item?.courseName}</h5>
+                          <h5 className="text-lg font-bold text-[#d42eeb] dark:text-white truncate capitalize">{item?.courseName}</h5>
                           <ul className='flex'>
 
                             {

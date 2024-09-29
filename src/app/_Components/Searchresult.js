@@ -69,16 +69,16 @@ const Searchresult = ({ query }) => {
     return (
         <>
             <div className='w-full flex flex-col items-center gap-8'>
-                <div className='w-[80%] mt-11 flex justify-start items-center gap-12'>
+                <div className='w-full md:w-full overflow-auto p-1 sm:mt-11 flex justify-start lg:justify-center items-center gap-4 sm:gap-12'>
                     <span className='font-semibold font-[Poppins] text-[#d42eeb]'>All</span>
-                    <div className='flex gap-2'>
+                    <div className='flex items-center gap-2'>
                         {["physics", "chemistry", "astrology", "engineering", "mechanics", "music", "Computer Science", "Photography"].map((item, idx) => (
                             <>
                             
                             
                             <Link key={idx} href={`/search/search?query=${item}`}>
                             <div key={idx} className="relative rounded-2xl group cursor-pointer hover:bg-pink-400 flex gap-4 items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 group border-2 border-[#d42eeb]   hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-purple-800">
-                                <span className="relative px-5 py-1 text-center transition-all ease-in duration-75 text-[#d42eeb] dark:bg-gray-900 group-hover:text-white  font-[Poppins]">
+                                <span className="relative px-5 py-1 text-center transition-all ease-in duration-75 text-[#d42eeb] dark:bg-gray-900 group-hover:text-white text-[12px] sm:text-[16px]  font-[Poppins]">
                                     {item}
                                 </span>
                             </div>
@@ -89,7 +89,7 @@ const Searchresult = ({ query }) => {
                     </div>
                 </div>
                 <div className='w-full flex justify-center'>
-                    {searchResults?.length > 0 ? <div className="w-fit mt-0 mb-0 ml-[130px] mr-[130px] pl-20 flex flex-wrap justify-start gap-4 items-center">
+                    {searchResults?.length > 0 ? <div className="w-fit mt-0 mb-0 ml-[12px] mr-[12px] md:ml-[130px] md:mr-[130px] pl-0 md:pl-20 flex flex-wrap justify-start gap-4 items-center">
                         {searchResults.map((item) => (
                           <Link href={`/courses/${item.courseId}/${item?.videosrc[0]?._id}`} key={item?._id} onClick={() => {
                             addCart(item.userId, item.courseId)

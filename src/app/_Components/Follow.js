@@ -73,7 +73,7 @@ const Follow = ({ teacherid }) => {
 
     return (
         <>
-            <button style={{background: 'linear-gradient(110deg, #e278ef, #ffa2f2)'}} onClick={() => { followed() }} className='follow text-white w-full h-fit rounded-xl p-1'>
+            <button style={{background: 'linear-gradient(110deg, #e278ef, #ffa2f2)'}} onClick={() => { followed() }} className='follow text-white w-full h-fit rounded-xl p-1 text-[12px] md:text-[16px]'>
                 {followState ? "Following" : "Follow"}
             </button>
         </>

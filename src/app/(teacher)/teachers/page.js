@@ -89,7 +89,7 @@ const AdminPage = () => {
     <span class="font-medium text-[#d42eeb] font-[Poppins]">Analytics Info!</span> Showing based on Revenue generating in month.
   </div>
 </div>
-        <div className="flex">
+        <div className="flex lg:flex-row flex-col">
           
         <div className="w-full lg:w-2/3 flex flex-col gap-8">
       

@@ -146,7 +146,7 @@ const Comment = ({ courseid,commentsList}) => {
                     src={comment.profilePicture}
                     alt={comment.name}
                   />
-                  {comment.name}
+                 <span className='truncate'>{comment.name}</span> 
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   <time pubdate dateTime={comment.dateTime} title={comment.dateTimeTitle}>

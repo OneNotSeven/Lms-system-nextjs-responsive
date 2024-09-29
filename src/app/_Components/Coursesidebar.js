@@ -12,11 +12,9 @@ const Coursesidebar = ({ courselist, price,courseid,videoid }) => {
  
 
   return (
-    <div>
+    <div className='w-full'>
 
-        { courselist?<motion.aside initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }} id="logo-sidebar" className="top-0 left-0 z-40 w-64 h-screen pt-8 transition-transform -translate-x-0 font-[Poppins] border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+        { courselist?<aside id="logo-sidebar" className=" left-0 z-40 w-64 h-full pt-8 transition-transform -translate-x-full bg-white border-r border-gray-200 lg:translate-x-0 fixed top-0 lg:sticky lg:block dark:border-gray-700" aria-label="Sidebar">
         <div className="h-full px-3 pb-4 overflow-y-auto dark:bg-gray-800">
           <ul className="space-y-2 font-medium">
             <div className='flex gap-1 w-full text-[#d42eeb] rounded-lg'>
@@ -45,7 +43,7 @@ const Coursesidebar = ({ courselist, price,courseid,videoid }) => {
             </div>
           </ul>
         </div>
-      </motion.aside>:null}
+      </aside>:null}
     </div>
   );
 };

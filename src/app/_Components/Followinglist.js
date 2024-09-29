@@ -79,8 +79,8 @@ const Followinglist = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <div className="p-6 shadow-lg rounded-lg border border-gray-200 flex w-full">
-                                <div className="flex items-center space-x-4 mb-6 w-full">
+                            <div className="p-6 shadow-lg rounded-lg border border-gray-200 flex lg:flex-row flex-col w-full">
+                                <div className="flex lg:flex lg:flex-row flex-col items-center space-x-4 mb-6 w-full">
                                     <div className="relative w-28 h-28">
                                         <Image
                                             src="/profiledummy.png"
@@ -90,8 +90,8 @@ const Followinglist = () => {
                                         />
                                 
                                     </div>
-                                    <div>
-                                        <h2 className="text-xl font-semibold text-[#d42eeb] font-[Poppins]">Good Morning Alex</h2>
+                                    <div className='flex flex-col sm:justify-start justify-center'>
+                                        <h2 className="text-xl font-semibold text-[#d42eeb]  font-[Poppins]">Good Morning</h2>
                                         <p className="text-sm text-[#ae29c0] font-[Poppins]">Continue Your Journey And Achieve Your Target</p>
                                     </div>
                                 </div>
@@ -108,6 +108,8 @@ const Followinglist = () => {
                                 {list.length > 0 ? <div className="space-y-4">
                                     {list.map((mentor, index) => (
                                         <div key={index} className="flex items-center justify-between">
+                                            <Link href={`/teacherprofile/${mentor.userId}`}>
+                                            
                                             <div className="flex items-center space-x-3 ">
                                                 <div className='rounded-full border-2 border-[#d42eeb] overflow-hidden p-[2px]'>
 
@@ -125,6 +127,7 @@ const Followinglist = () => {
                                                     <p className="text-sm text-[#a829b9] font-['SUSE']">{mentor.profession}</p>
                                                 </div>
                                             </div>
+                                            </Link>
                                             <Link href={`/teacherprofile/${mentor.userId}`}>
                                                 <button className="rounded-full hover:bg-[#d42eeb] hover:text-white text-[#d42eeb] border border-[#c43dd5] font-[Poppins] text-[14px] py-1 px-3">
                                                     Profile

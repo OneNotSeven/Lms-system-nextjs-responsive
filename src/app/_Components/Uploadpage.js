@@ -331,7 +331,7 @@ console.log("tutututut",tutor)
           </Link>
           Upload Course
         </h5>
-        <div className=" flex">
+        <div className=" flex md:flex-row flex-col-reverse">
           <div className="flex flex-col w-full">
           <div className="mb-6">
               <label
@@ -628,7 +628,7 @@ console.log("tutututut",tutor)
               </span>
               <label
                 for="dropzone-file"
-                className="flex relative overflow-hidden object-cover object-center flex-col items-center justify-center w-[80%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
+                className="flex relative overflow-hidden object-cover object-center flex-col items-center justify-center w-full md:w-[80%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
               >
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <svg
@@ -679,7 +679,7 @@ console.log("tutututut",tutor)
 
               <label
                 for="dropzone-thumbfile"
-                className=" relative overflow-hidden object-cover object-center flex flex-col items-center justify-center w-[80%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
+                className=" relative overflow-hidden object-cover object-center flex flex-col items-center justify-center w-full md:w-[80%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
               >
                 <svg class="w-16 h-16 text-gray-400 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-7 7V5"/>

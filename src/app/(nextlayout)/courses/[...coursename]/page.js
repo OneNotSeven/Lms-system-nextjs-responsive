@@ -156,6 +156,7 @@ const Page = ({ params }) => {
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
+        className=' z-40'
       >
         <Coursesidebar
           courselist={sideList}
@@ -164,12 +165,12 @@ const Page = ({ params }) => {
           videoid={ params.coursename[1]}
         />
       </motion.div>
-      <div className='flex w-full'>
+      <div className='flex w-full lg:flex-row flex-col-reverse'>
         
       <div className="flex flex-col justify-center items-center relative gap-6 w-full p-4">
       {price=="free"? null:<motion.div initial={{ opacity: 0,scale:0, y: 20 }}
                     animate={{ opacity: 1,scale:1, y: 0 }}
-                    transition={{ duration:1, ease: 'easeOut' }} className="bg-[#ffffc3] rounded-xl w-full text-[#cbaa01] py-3 px-4 md:px-6 flex items-center justify-between">
+                    transition={{ duration:1, ease: 'easeOut' }} className="bg-[#ffffc3] hidden lg:block rounded-xl w-full text-[#cbaa01] py-3 px-4 md:px-6 items-center justify-between">
       <div className="flex items-center gap-2">
       <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17.345a4.76 4.76 0 0 0 2.558 1.618c2.274.589 4.512-.446 4.999-2.31.487-1.866-1.273-3.9-3.546-4.49-2.273-.59-4.034-2.623-3.547-4.488.486-1.865 2.724-2.899 4.998-2.31.982.236 1.87.793 2.538 1.592m-3.879 12.171V21m0-18v2.2"/>
@@ -179,7 +180,7 @@ const Page = ({ params }) => {
       </div>
      </motion.div>}
         <motion.div
-          className="w-[760px] flex flex-col rounded-lg"
+          className="w-full flex flex-col rounded-lg"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -219,10 +220,10 @@ const Page = ({ params }) => {
             )}
           </motion.div>
           <div>
-            <ul className="flex p-6 justify-evenly items-center font-[Poppins]">
-              <li className="flex gap-1">
+            <ul className="flex p-6 gap-3 justify-evenly items-center font-[Poppins]">
+              <li className="flex gap-1 truncate text-[14px] sm:text-[16px]">
                 <svg
-                  className="w-6 h-6 text-gray-600"
+                  className="w-5 sm:w-6 sm:h-6 text-gray-600"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -238,12 +239,12 @@ const Page = ({ params }) => {
                     d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                   />
                 </svg>
-                  <span className="font-semibold text-gray-500">{ enrollDetails?.title}</span>
-                  <span className="text-gray-500"></span>
+                  <span className="lg:font-semibold text-gray-500 truncate">{ enrollDetails?.title}</span>
+                  
               </li>
-              <li className="flex gap-1">
+              <li className="flex gap-1 truncate text-[14px] sm:text-[16px]">
                 <svg
-                  className="w-6 h-6 text-gray-600"
+                  className=" w-5 sm:w-6 sm:h-6 text-gray-600"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -259,11 +260,11 @@ const Page = ({ params }) => {
                     d="M8 7H5a2 2 0 0 0-2 2v4m5-6h8M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m0 0h3a2 2 0 0 1 2 2v4m0 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6m18 0s-4 2-9 2-9-2-9-2m9-2h.01"
                   />
                 </svg>
-                <span className="font-semibold text-gray-500">Beginner</span>
+                <span className=" lg:font-semibold text-gray-500 truncate">Beginner</span>
               </li>
-              <li className="flex gap-1">
+              <li className="flex gap-1 truncate text-[14px] sm:text-[16px]">
                 <svg
-                  className="w-6 h-6 text-gray-600"
+                  className="w-5 sm:w-6 sm:h-6 text-gray-600"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -280,14 +281,14 @@ const Page = ({ params }) => {
                   />
                 </svg>
                 <Link href={`/teacherprofile/${tutorId}`}>
-                  <span className="font-semibold text-gray-500 capitalize hover:text-green-500">{tutor}</span>
+                  <span className=" lg:font-semibold text-gray-500 capitalize hover:text-green-500 truncate">{tutor}</span>
                 </Link>
               </li>
             </ul>
           </div>
 
           <motion.div
-            className="flex gap-6 mt-4 border-b border-gray-300"
+            className="flex gap-6 mt-4 overflow-auto border-b border-gray-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
