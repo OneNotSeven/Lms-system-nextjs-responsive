@@ -114,7 +114,7 @@ const Searchresult = ({ query }) => {
                     <div className='p-5'>
                       <div className='flex flex-col gap-2'>
                         <div className='flex items-center justify-between'>
-                          <h5 className="text-lg font-bold text-[#d42eeb] dark:text-white capitalize">{item?.courseName}</h5>
+                          <h5 className="text-lg truncate font-bold text-[#d42eeb] dark:text-white capitalize">{item?.courseName}</h5>
                           <ul className='flex'>
 
                             {
