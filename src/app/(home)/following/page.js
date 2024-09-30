@@ -62,12 +62,12 @@ const Page = () => {
                     {list.map((items,idx) => (
                       <Link key={idx} href={`/teacherprofile/${items.userId}`}>
                       <div className='w-full'>
-                            <div className='flex gap-5 p-3 bg-[#d357e414] rounded-xl w-[90%]'>
+                            <div className='flex gap-5 p-3 bg-[#d357e414] rounded-xl w-full sm:w-[90%]'>
                                 <img className='w-24 h-24 mb-3 rounded-full shadow-lg"' src={items?.image} alt="profile" />
                                 <div>
-                                    <span className='font-semibold text-[#d42eeb]'>{items?.name} { items?.lastname}</span>
-                                    <p className='text-gray-400'>{items.profession}</p>
-                                    <p className=' text-gray-700'>{ items?.bio}</p>
+                                    <span className='font-semibold text-[#d42eeb] text-[12px] sm:text-[16px]'>{items?.name} { items?.lastname}</span>
+                                    <p className='text-gray-400 text-[12px] sm:text-[16px]'>{items.profession}</p>
+                                    <p className=' text-gray-700 text-[12px] sm:text-[16px]'>{ items?.bio}</p>
                                 </div>
                             </div>
                        </div>

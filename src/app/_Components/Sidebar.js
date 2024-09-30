@@ -126,7 +126,7 @@ const Sidebar = () => {
 
             {/* Modal */}
             {isModalOpen && (
-                <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+                <div className="fixed z-50 inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
                     <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
                         <h3 className="text-lg font-semibold mb-4">Confirm Log Out</h3>
                         <p className="mb-4">Are you sure you want to log out?</p>

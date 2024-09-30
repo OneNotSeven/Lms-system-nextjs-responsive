@@ -3,7 +3,7 @@ import Follow from '@/app/_Components/Follow'
 import { appBaseUrl } from '@/schema/appurl'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-
+import { motion } from 'framer-motion'
 
 const Page = (content) => {
 
@@ -121,53 +121,90 @@ const Page = (content) => {
 </header>
             <div>
                 <h2 class="text-2xl font-semibold text-gray-600 mb-4">All Courses</h2>
-                  {fetchTutotCourses.length!=0 ? <div class="flex flex-col mx-4 mb-4 gap-3">
-                    {
-                      fetchTutotCourses?.map((items, idx) => (
-                        <>
-                          <Link href={`/courses/${items.courseId}/${items.videosrc[0]._id}`}>
-                          
-                          <div className='w-full'>
-                                
-                              <div className='w-full shadow-md rounded-xl'>
+                  {fetchTutotCourses.length!=0 ? <div class="flex flex-wrap mx-4 mb-4 gap-3">
+                    {fetchTutotCourses.map((item, idx) => (
+                <Link key={idx} href={`/courses/${item.courseId}/${item?.videosrc[0]?._id}`}  className='cursor-pointer' onClick={() => {
+                  addCart(item.userId, item.courseId)
+                
+                }
+                  }>
 
-                                <div id="defaultTabContent" className='bg-[#f8f0f0] p-7 rounded-3xl flex md:flex-row flex-col gap-2 md:gap-9 items-center w-full'>
-                                  <div className='md:w-[10vw] md:h-[9vw] w-full h-full flex object-cover object-center overflow-hidden rounded-md'>
-                                <div id="defaultTabContent" className='bg-[#f8f0f0] p-7 rounded-3xl flex gap-9 items-center w-full'>
-                                  <div className='w-[200px] h-[140px] flex object-cover object-center overflow-hidden rounded-md'>
+                  <motion.div
+                    key={item._id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    whileHover={{ scale: 1.05 }}
+                    className="rounded-lg  overflow-hidden shadow-md border border-gray-200 dark:bg-gray-800 dark:border-gray-700 max-w-sm w-[200px] h-[250px] sm:w-[300px] sm:h-fit lg:w-[350px]"
+                  >
+                    <div className='w-full h-[120px] sm:h-[198px] overflow-hidden'>
+                      <img
+                        className="w-full h-full object-cover rounded-t-lg"
+                        src={item?.thumbnail || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXl6KGuzV6r5kgfQHXABWdrL9OZR1tTGMBLw&s"}
+                        alt="course thumbnail"
+                      />
+                    </div>
+                    <div className='p-5'>
+                      <div className='flex flex-col gap-2'>
+                        <div className='flex items-center justify-between'>
 
-                                    <img className='flex object-cover object-center' src={items?.thumbnail || "/profiledummy.png"} width={500} height={500} alt="Picture of the author" />
-                                  </div>
-                                  <div className="rounded-lg dark:bg-gray-800" id="about" role="tabpanel" aria-labelledby="about-tab">
-                  
-                                    <h2 className="mb-3 text-[12px] md:text-[1.2vw] font-semibold tracking-tight text-gray-900 dark:text-white">{items?.courseName}</h2>
-                                    <p className="mb-3 text-gray-500 text-[12px] md:text-[0.8vw] dark:text-gray-400">{items?.courseDesc}</p>
+                          <h5 className=" font-bold text-[#d42eeb] dark:text-white truncate sm:text-[18px] text-[12px] capitalize">{item?.courseName}</h5>
+                         
 
-                                    <div className='tag mt-3'><span className='pl-3 pr-3 p-1 text-[8px] md:text-[0.7vw] text-[#d42eeb] rounded-full font-semibold border-2 border-[#d42eeb]'>{items?.tags}</span></div>
-                                    <div className='flex items-center gap-2'>
-                        
-                                      <span className="inline-flex text-[8px] md:text-[0.9vw] items-center mt-3 font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700">
-                                        Learn more
-                                        <svg className=" w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-                                        </svg>
-                                      </span>
-                      
-                                    </div>
-                                  </div>
+                          <ul className='flex'>
 
-      
-                                </div>
-                              </div>
-                           
-                            </div>
-                              </div>
-                              </div>
+                            {
+                              [1, 2, 3, 4, 5].map((items,idx) => (
+                                <svg key={idx} className="sm:w-4 sm:h-4 w-3 h-3  fill-yellow-500 text-yellow-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                  <path stroke="currentColor" stroke-width="2" d="M11.083 5.104c.35-.8 1.485-.8 1.834 0l1.752 4.022a1 1 0 0 0 .84.597l4.463.342c.9.069 1.255 1.2.556 1.771l-3.33 2.723a1 1 0 0 0-.337 1.016l1.03 4.119c.214.858-.71 1.552-1.474 1.106l-3.913-2.281a1 1 0 0 0-1.008 0L7.583 20.8c-.764.446-1.688-.248-1.474-1.106l1.03-4.119A1 1 0 0 0 6.8 14.56l-3.33-2.723c-.698-.571-.342-1.702.557-1.771l4.462-.342a1 1 0 0 0 .84-.597l1.753-4.022Z" />
+                                </svg>
+
+                              ))
+                            }
+                          </ul>
+                               
+                        </div>
+                        {/* <p className="text-sm text-gray-700 dark:text-gray-400">{item?.courseDesc}</p> */}
+                        <div className='flex justify-between items-center text-sm text-gray-600 dark:text-gray-400 gap-2'>
+                          <div className='flex items-center gap-1'>
+
+                            <svg
+                              className="w-6 h-6 text-[#882096] dark:text-white"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"
+                              />
+                            </svg>
+                            <p className='font-semibold sm:text-[14px] text-[10px] capitalize w-full'><span className='flex font-semibold font-[Poppins] text-[#be2dd1]'>{item?.videosrc?.length} chapters</span></p>
+                          </div>
+                          <Link href={`/teacherprofile/${item.userId}`}>
+                            <div className='flex gap-1 '>
+                              <svg class="w-5 h-5 text-gray-800 fill-purple-700 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd" />
+                              </svg>
+
+                              <span className='font-[Poppins] capitalize sm:text-[14px] text-[10px] text-gray-600'>{item.tutorName}</span></div>
                           </Link>
-                        </>
-                          
-                      ))
-                    }
+                        </div>
+                      </div>
+                      <hr className='mt-3 mb-3' />
+                      <span className=' capitalize font-semibold font-[Poppins] text-[12px] sm:text-[16px] text-[#a127b2]'>{item.price != "free" ? "₹" + item?.price : item?.price}
+                       
+                      </span>
+                    </div>
+                  </motion.div>
+                </Link>
+              ))}
                   </div> : <p className='text-gray-400'>No courses</p>}
 </div>
               </>

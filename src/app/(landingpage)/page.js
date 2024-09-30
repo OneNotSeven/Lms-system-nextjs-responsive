@@ -26,7 +26,7 @@ const Page = () => {
 
   return (
     <>
-      <div className='w-full h-screen relative overflow-hidden'>
+      <div className='w-full h-screen flex justify-center relative overflow-hidden'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 2000 1500'
@@ -92,20 +92,20 @@ const Page = () => {
         </svg>
 
 
-        <div className='flex flex-wrap  absolute top-[96px] flex-col items-center justify-center flex-1 p-6 text-center md:flex-row md:justify-between md:text-left'>
+        <div className='flex lg:flex-row flex-col-reverse  absolute top-[96px] items-center justify-center flex-1 p-6 text-center md:flex-row md:justify-between md:text-left'>
           
         
-      <div className=' ml-28 w-fit font-[Poppins] flex flex-col justify-center gap-8'>
+      <div className=' ml-0 lg:ml-28 w-fit font-[Poppins] flex flex-col justify-center gap-8'>
             <div>
-<span className='text-[4vw] font-semibold text-white'>Welcome to Quest Castle</span>
+<span className='text-[28px] sm:text-[4vw] font-semibold text-white'>Welcome to Quest Castle</span>
             </div>
-            <div className='w-[42vw]'>
-              <span className='text-[2.5vw] text-[#80286e]  font-semibold'>Thunder of knowledge,wisdom and prosperity</span>
+            <div className=' w-full md:w-[42vw]'>
+              <span className=' text-[20px] sm:text-[2.5vw] text-[#80286e]  font-semibold'>Thunder of knowledge,wisdom and prosperity</span>
         </div>
         <div>
-          <button onClick={()=>{router.push("/login")}} style={{background: 'linear-gradient(110deg, #e278ef, #ffa2f2)'}} className='text-[1.6vw] border-2 border-pink-100  bg-[#f3a3fd] rounded-lg p-3 font-semibold text-white flex gap-2'>GET STARTED
+          <button onClick={()=>{router.push("/login")}} style={{background: 'linear-gradient(110deg, #e278ef, #ffa2f2)'}} className='md:text-[1.6vw] border-2 text-[24px] justify-center border-pink-100 w-full lg:w-[90%]   bg-[#f3a3fd] rounded-lg p-3 font-semibold text-white flex gap-2'>GET STARTED
 
-          <svg className="w-[vw] h-[2vw] text-white font-semibold dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <svg className="md:w-[vw] md:h-[2vw] w-9 h-9 text-white font-semibold dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
 </svg>
 
@@ -113,18 +113,27 @@ const Page = () => {
           </button>
         </div>
           </div>
-          <div className=' order-1' >
+          <div className='w-[200px] mr-5 lg:mr-0 lg:w-full order-2' >
 
          
           
-         
             <Image
               src="/boy.png"
             
                 width={500}
               height={500}
               
-              className="object-contain"
+              className="object-contain hidden lg:block"
+              alt="Boy"
+            />
+
+<Image
+              src="/clip-pics-of-animated-cartoons-8-removebg-preview.png"
+            
+                width={500}
+              height={500}
+              
+              className="object-contain mix-blend-luminosity lg:hidden"
               alt="Boy"
             />
         

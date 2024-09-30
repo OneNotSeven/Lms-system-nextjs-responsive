@@ -1,1 +1,1 @@
-export const appBaseUrl="https://questcastle.vercel.app"
+export const appBaseUrl="http://localhost:3000"

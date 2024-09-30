@@ -2,12 +2,13 @@
 
 import { emailVerifySchema } from '@/schema/yupschema';
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { appBaseUrl } from '@/schema/appurl';
 
 const Page = () => {
+  const [progress, setprogress] = useState(false)
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -15,6 +16,7 @@ const Page = () => {
     validationSchema: emailVerifySchema,
     onSubmit: async (values) => {
       try {
+        setprogress(true)
         const response = await fetch(`${appBaseUrl}/api/emailverify`, {
           method: "POST",
           headers: {
@@ -26,6 +28,7 @@ const Page = () => {
         const result = await response.json();
 
         if (result.success) {
+          setprogress(false)
           toast.success("Link sent successfully", {
             style: {
               backgroundColor: 'black',
@@ -34,6 +37,7 @@ const Page = () => {
             },
           });
         } else {
+          setprogress(false)
           toast.error("Email not found", {
             style: {
               backgroundColor: 'black',
@@ -43,6 +47,7 @@ const Page = () => {
           });
         }
       } catch (error) {
+        setprogress(false)
         toast.error("An unexpected error occurred", {
           style: {
             backgroundColor: 'black',
@@ -58,7 +63,7 @@ const Page = () => {
     <>
       <ToastContainer />
       <div className='w-full h-screen flex justify-center items-center font-[Poppins]'>
-        <div className='w-[30%] flex flex-col gap-2'>
+        <div className='sm:w-[30%] w-full sm:p-0 p-3 flex flex-col gap-2'>
           <p>Email</p>
           <input
             type="email"
@@ -76,7 +81,7 @@ const Page = () => {
             className=' font-[Poppins] text-white mt-4 p-2 rounded-md'
             onClick={formik.handleSubmit}
           >
-            Submit
+            {progress ? "processing..." : "Submit"}
           </button>
         </div>
       </div>

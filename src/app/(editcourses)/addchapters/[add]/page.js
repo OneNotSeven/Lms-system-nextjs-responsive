@@ -227,7 +227,7 @@ setloader(true)
           </Link>
           Add Chapters to your Course
         </h5>
-        <div className=" flex">
+        <div className=" flex lg:flex-row flex-col">
             <div className="flex flex-col w-full">
             <div className="mb-6">
               <label
@@ -431,7 +431,7 @@ setloader(true)
               </span>
               <label
                 for="dropzone-file"
-                className="flex max-w-[483px] mx-h-[256px] relative overflow-hidden object-cover object-center flex-col items-center justify-center w-[483px] h-[256px] border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
+                className="flex max-w-[483px] mx-h-[256px] w-full  relative overflow-hidden object-cover object-center flex-col items-center justify-center lg:w-[483px] h-[256px] border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
               >
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <svg

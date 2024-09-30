@@ -103,7 +103,7 @@ const AdminPage = () => {
       <h2 className="text-lg font-semibold font-[Poppins] text-gray-600">Todays Events</h2>
       {
         events.map((items,idx) => (
-          <div key={idx} className="flex gap-4 font-[Poppins]">
+          <div key={idx} className="flex sm:flex-row flex-col gap-4 font-[Poppins]">
         <div style={{background: 'linear-gradient(110deg, #e278ef, #ffa2f2)'}} className="w-20 h-20 rounded-xl">
           <div  className="flex flex-col items-center">
                 <span className=" text-2xl text-white font-sans font-semibold">{

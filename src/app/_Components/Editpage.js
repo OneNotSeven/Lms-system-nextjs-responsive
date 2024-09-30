@@ -113,7 +113,7 @@ const Editpage = ({ data }) => {
       <Navbar/>
       
       <div class="container mx-auto px-4 py-8 font-[Poppins] ">
-        <div className='mx-64 flex gap-4 items-center'>
+        <div className='lg:mx-64 mx-2 flex gap-4 items-center'>
           <Link href="/stdashboard">
           
         <svg class="w-9 h-9 text-[#d42eeb] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">

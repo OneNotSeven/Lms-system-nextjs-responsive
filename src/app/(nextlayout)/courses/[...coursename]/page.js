@@ -221,9 +221,9 @@ const Page = ({ params }) => {
           </motion.div>
           <div>
             <ul className="flex p-6 gap-3 justify-evenly items-center font-[Poppins]">
-              <li className="flex gap-1 truncate text-[14px] sm:text-[16px]">
+              <li className="flex gap-1 truncate w-[96px] sm:w-fit text-[14px] sm:text-[16px]">
                 <svg
-                  className="w-5 sm:w-6 sm:h-6 text-gray-600"
+                  className="w-[50%] sm:w-6 sm:h-6 text-gray-600"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

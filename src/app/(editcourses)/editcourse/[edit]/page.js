@@ -115,11 +115,11 @@ const Page = ({ params }) => {
 Edit Videos</div></Link>
         {available.length > 0 && <ul className='flex gap-4 flex-col p-8'>
           {available.map((item, index) => (
-            <div key={item._id} className='flex gap-11 p-9 rounded-2xl '>
+            <div key={item._id} className='flex lg:flex-row flex-col gap-11 lg:p-9 w-full rounded-2xl '>
               <div>
                 <label
                   htmlFor={`video-${item._id}`}
-                  className="flex group w-[483px] h-[256px] max-w-[483px] max-h-[256px] relative overflow-hidden object-cover object-center flex-col items-center justify-center border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
+                  className="flex group lg:w-[483px] lg:h-[256px] w-full max-w-[483px] max-h-[256px] relative overflow-hidden object-cover object-center flex-col items-center justify-center border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
                 >
                   <div className='relative'>
                     <video id={`video-${item._id}`} className='rounded-md' width="full" height="full" controls>
@@ -216,7 +216,7 @@ Edit Videos</div></Link>
           <h2 className='text-2xl font-semibold font-[Poppins]'>Attachments</h2>
         </div>
         {files.length > 0 && (
-          <ul className='mt-6 flex ml-14 gap-5 font-[Poppins]'>
+          <ul className='mt-6 flex ml-14 flex-wrap gap-5 font-[Poppins]'>
             {files.map((file) => (
               <li key={file._id} className='flex gap-1 w-fit bg-[#d42eeb] text-white items-center rounded-3xl pr-4 pl-4'>
                 <span className='p-2 rounded-2xl'>{file.filename}</span>

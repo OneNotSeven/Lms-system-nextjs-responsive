@@ -93,9 +93,10 @@ export default function PaymentComponent({ info}) {
   }
 
   return (
-    <div className=" fixed w-full left-4 flex justify-center items-center gap-8 top-12">
+    <div className="payment fixed w-full left-4 flex justify-center items-center gap-8 top-12">
+     
+
           <div className="bg-white relative shadow-lg w-[500px] rounded-lg p-8">
-    
 
         <h2 className="text-2xl font-bold mb-4">Payment Details</h2>
         <p className="mb-6 text-gray-600">Enter your payment information below.</p>

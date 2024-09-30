@@ -51,7 +51,7 @@ var transporter = nodemailer.createTransport({
 var mailOptions = {
   from: '<theflutebro@gmail.com>',
   to: schemaEmailVerify[0].email,
-  subject: 'Reset password valid for 5 minutes',
+  subject: 'Quick castle Reset password valid for 5 minutes',
   text: link
 };
 

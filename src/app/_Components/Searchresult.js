@@ -89,22 +89,23 @@ const Searchresult = ({ query }) => {
                     </div>
                 </div>
                 <div className='w-full flex justify-center'>
-                    {searchResults?.length > 0 ? <div className="w-fit mt-0 mb-0 ml-[12px] mr-[12px] md:ml-[130px] md:mr-[130px] pl-0 md:pl-20 flex flex-wrap justify-start gap-4 items-center">
-                        {searchResults.map((item) => (
-                          <Link href={`/courses/${item.courseId}/${item?.videosrc[0]?._id}`} key={item?._id} onClick={() => {
-                            addCart(item.userId, item.courseId)
-                          
-                          }
-                            } className='cursor-pointer'>
-                               <motion.div
+                    {searchResults?.length > 0 ? <div className="w-fit mt-0 mb-0 ml-[12px] mr-[12px] md:ml-[130px] md:mr-[130px] pl-0 md:pl-20 flex flex-wrap justify-center sm:justify-start gap-4 items-center">
+                      {searchResults.map((item, idx) => (
+                <Link key={idx} href={`/courses/${item.courseId}/${item?.videosrc[0]?._id}`}  className='cursor-pointer' onClick={() => {
+                  addCart(item.userId, item.courseId)
+                
+                }
+                  }>
+
+                  <motion.div
                     key={item._id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                     whileHover={{ scale: 1.05 }}
-                    className="rounded-lg overflow-hidden shadow-md border border-gray-200 dark:bg-gray-800 dark:border-gray-700 max-w-sm w-full sm:w-[300px] lg:w-[350px]"
+                    className="rounded-lg  overflow-hidden shadow-md border border-gray-200 dark:bg-gray-800 dark:border-gray-700 max-w-sm w-[200px] h-[250px] sm:w-[300px] sm:h-fit lg:w-[350px]"
                   >
-                    <div className='w-full h-[198px] overflow-hidden'>
+                    <div className='w-full h-[120px] sm:h-[198px] overflow-hidden'>
                       <img
                         className="w-full h-full object-cover rounded-t-lg"
                         src={item?.thumbnail || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXl6KGuzV6r5kgfQHXABWdrL9OZR1tTGMBLw&s"}
@@ -114,12 +115,15 @@ const Searchresult = ({ query }) => {
                     <div className='p-5'>
                       <div className='flex flex-col gap-2'>
                         <div className='flex items-center justify-between'>
-                          <h5 className="text-lg truncate font-bold text-[#d42eeb] dark:text-white capitalize">{item?.courseName}</h5>
+
+                          <h5 className=" font-bold text-[#d42eeb] dark:text-white truncate sm:text-[18px] text-[12px] capitalize">{item?.courseName}</h5>
+                         
+
                           <ul className='flex'>
 
                             {
                               [1, 2, 3, 4, 5].map((items,idx) => (
-                                <svg key={idx} class="w-4 h-4 fill-yellow-500 text-yellow-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <svg key={idx} className="sm:w-4 sm:h-4 w-3 h-3  fill-yellow-500 text-yellow-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                   <path stroke="currentColor" stroke-width="2" d="M11.083 5.104c.35-.8 1.485-.8 1.834 0l1.752 4.022a1 1 0 0 0 .84.597l4.463.342c.9.069 1.255 1.2.556 1.771l-3.33 2.723a1 1 0 0 0-.337 1.016l1.03 4.119c.214.858-.71 1.552-1.474 1.106l-3.913-2.281a1 1 0 0 0-1.008 0L7.583 20.8c-.764.446-1.688-.248-1.474-1.106l1.03-4.119A1 1 0 0 0 6.8 14.56l-3.33-2.723c-.698-.571-.342-1.702.557-1.771l4.462-.342a1 1 0 0 0 .84-.597l1.753-4.022Z" />
                                 </svg>
 
@@ -149,7 +153,7 @@ const Searchresult = ({ query }) => {
                                 d="M12 6.03v13m0-13c-2.819-.831-4.715-1.076-8.029-1.023A.99.99 0 0 0 3 6v11c0 .563.466 1.014 1.03 1.007 3.122-.043 5.018.212 7.97 1.023m0-13c2.819-.831 4.715-1.076 8.029-1.023A.99.99 0 0 1 21 6v11c0 .563-.466 1.014-1.03 1.007-3.122-.043-5.018.212-7.97 1.023"
                               />
                             </svg>
-                            <p className='font-semibold text-sm capitalize w-full'><span className='flex font-semibold font-[Poppins] text-[#be2dd1]'>{item?.videosrc?.length} chapters</span></p>
+                            <p className='font-semibold sm:text-[14px] text-[10px] capitalize w-full'><span className='flex font-semibold font-[Poppins] text-[#be2dd1]'>{item?.videosrc?.length} chapters</span></p>
                           </div>
                           <Link href={`/teacherprofile/${item.userId}`}>
                             <div className='flex gap-1 '>
@@ -157,18 +161,18 @@ const Searchresult = ({ query }) => {
                                 <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd" />
                               </svg>
 
-                              <span className=' capitalize text-gray-600 font-[Poppins]'>{item.tutorName}</span></div>
+                              <span className='font-[Poppins] capitalize sm:text-[14px] text-[10px] text-gray-600'>{item.tutorName}</span></div>
                           </Link>
                         </div>
                       </div>
                       <hr className='mt-3 mb-3' />
-                      <span className=' capitalize font-semibold font-[Poppins] text-[#a127b2]'>{item.price != "free" ? "₹" + item?.price : item?.price}
+                      <span className=' capitalize font-semibold font-[Poppins] text-[12px] sm:text-[16px] text-[#a127b2]'>{item.price != "free" ? "₹" + item?.price : item?.price}
                        
                       </span>
                     </div>
                   </motion.div>
-                            </Link>
-                        ))}
+                </Link>
+              ))}
                     </div> : <>
                             {searchResults.length<=0 && loader==false?<p>no result found</p>:null}
                             { loader==true?
