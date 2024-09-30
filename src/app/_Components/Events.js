@@ -168,11 +168,11 @@ const AddEventForm = () => {
             {/* Modal for viewing events */}
             {isModalOpen && (
                 <div
-                    className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
+                    className="fixed p-3 inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center"
                     onClick={() => setIsModalOpen(false)}
                 >
                     <div
-                        className="bg-white p-6 rounded-lg shadow-lg w-1/2"
+                        className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-1/2"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <h2 className="text-2xl font-bold mb-4">Your Events</h2>
@@ -189,7 +189,7 @@ const AddEventForm = () => {
                                 <li>No events found.</li>
                             ) : (
                                 events.map(event => (
-                                    <li key={event._id} className="border border-gray-300 p-3 rounded-md">
+                                    <li key={event._id} className="border border-gray-300 text-[12px] sm:text-[16px] p-3 rounded-md">
                                         <h4 className="font-semibold">{event.title}</h4>
                                         <p>{event.date}</p>
                                         <p>{event.description}</p>
