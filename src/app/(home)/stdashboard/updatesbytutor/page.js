@@ -109,12 +109,12 @@ const Page = () => {
                   <img className="w-8 h-8 rounded-full" src={items?.image} alt="Jese image" />
                   <div className="flex flex-col gap-1 w-full max-w-[320px]">
                     <div className="flex items-center space-x-2 rtl:space-x-reverse">
-                      <span className="text-sm font-semibold text-gray-900 dark:text-white">{items.name}</span>
-                      <span className="text-sm font-normal text-gray-500 dark:text-gray-400">{formattedDate}</span>
+                      <span className="text-sm font-semibold truncate text-gray-900">{items.name}</span>
+                      <span className="text-sm font-normal text-gray-500">{formattedDate}</span>
                     </div>
-                    <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+                    <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
                       <p className="text-sm font-normal text-gray-900 dark:text-white"> {items.announcement.description}</p>
-                      <span className='flex justify-end text-xs  text-gray-500 dark:text-gray-400'>{formattedTime}</span>
+                      <span className='flex justify-end text-xs  text-gray-500'>{formattedTime}</span>
                     </div>
                     <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
                   </div>
