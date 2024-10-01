@@ -113,7 +113,7 @@ const Page = () => {
                       <span className="text-sm font-normal text-gray-500">{formattedDate}</span>
                     </div>
                     <div className="flex flex-col leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-                      <p className="text-sm font-normal text-gray-900 dark:text-white"> {items.announcement.description}</p>
+                      <p className="text-sm font-normal text-gray-800"> {items.announcement.description}</p>
                       <span className='flex justify-end text-xs  text-gray-500'>{formattedTime}</span>
                     </div>
                     <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
