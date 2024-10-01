@@ -85,7 +85,7 @@ const Navbar = () => {
                 data-drawer-toggle="logo-sidebar"
                 aria-controls="logo-sidebar"
                 type="button"
-                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 "
+                className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               >
                 <span className="sr-only">Open sidebar</span>
                 <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +98,7 @@ const Navbar = () => {
               <div className='flex gap-1'>
                 <form onSubmit={handleSearchSubmit} className="relative hidden lg:block w-96">
                   <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <svg className="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                       <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                     <span className="sr-only">Search icon</span>
@@ -108,7 +108,7 @@ const Navbar = () => {
                     id="search-navbar"
                     value={searchText}
                     onChange={handleSearchChange}
-                    className="w-full p-2 ps-10 text-sm text-gray-700 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500 focus:outline-none"
+                    className="w-full p-2 ps-10 text-sm text-gray-700 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 focus:outline-none"
                     placeholder="Search..."
                   />
                 </form>
@@ -138,7 +138,7 @@ const Navbar = () => {
                 <div>
                   <div
                     type="button"
-                    className="cursor-pointer flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    className="cursor-pointer flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300"
                     aria-expanded="false"
                     data-dropdown-toggle="dropdown-user"
                   >
@@ -146,22 +146,22 @@ const Navbar = () => {
                     <img className="w-8 h-8 rounded-full" src="/profiledummy.png" alt="user photo" />
                   </div>
                 </div>
-                <div className="z-50 hidden absolute top-4 right-0 group-hover:block my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:divide-gray-600" id="dropdown-user">
+                <div className="z-50 hidden absolute top-4 right-0 group-hover:block my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow" id="dropdown-user">
                   <div className="px-4 py-3" role="none">
                     <p className="text-sm text-gray-900 " role="none">{userDetails.name}</p>
                     <p className="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">{userDetails.email}</p>
                   </div>
                   <ul className="py-1" role="none">
                     <li>
-                      <Link href="/stdashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</Link>
+                      <Link href="/stdashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Dashboard</Link>
                     </li>
                     <li>
-                      <Link href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Settings</Link>
+                      <Link href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</Link>
                     </li>
                     <li>
                       <button
                         onClick={() => setShowSignOutModal(true)}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white w-full text-left"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
                         role="menuitem"
                       >
                         Sign out
@@ -178,7 +178,7 @@ const Navbar = () => {
         </div>
         <form onSubmit={handleSearchSubmit} className="relative block lg:hidden w-full p-1">
                   <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <svg className="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                       <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                     <span className="sr-only">Search icon</span>
@@ -188,7 +188,7 @@ const Navbar = () => {
                     id="search-navbar"
                     value={searchText}
                     onChange={handleSearchChange}
-                    className="w-full p-2 ps-10 text-sm text-gray-700 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500 focus:outline-none"
+                    className="w-full p-2 ps-10 text-sm text-gray-700 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
                     placeholder="Search..."
                   />
                 </form>
@@ -203,7 +203,7 @@ const Navbar = () => {
             <div className="flex justify-end gap-2">
               <button
                 onClick={() => setShowSignOutModal(false)}
-                className="px-4 py-2 bg-gray-300 dark:bg-gray-600 rounded-md text-gray-800 dark:text-gray-200"
+                className="px-4 py-2 bg-gray-300 rounded-md text-gray-800"
               >
                 Cancel
               </button>
