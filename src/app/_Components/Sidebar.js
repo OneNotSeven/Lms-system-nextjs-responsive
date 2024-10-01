@@ -57,7 +57,7 @@ const Sidebar = () => {
     return (
         <>
             <div className='sticky font-[Poppins] hover:text-[#d42eeb] z-20'>
-                <aside id="logo-sidebar" className=" left-0 z-40 w-64 h-full pt-8 transition-transform -translate-x-full bg-white  lg:translate-x-0 fixed top-[64px] lg:sticky lg:block dark:border-gray-700" aria-label="Sidebar">
+                <aside id="logo-sidebar" className=" left-0 z-40 w-64 h-full bg-white border-r border-gray-200 pt-8 transition-transform -translate-x-full bg-white  lg:translate-x-0 fixed top-[64px] lg:sticky lg:block dark:border-gray-700" aria-label="Sidebar">
                     <div className="h-full px-3 pb-4 relative overflow-y-auto bg-white ">
                         <ul className="space-y-2 font-medium">
                             {/* Sidebar Links */}
