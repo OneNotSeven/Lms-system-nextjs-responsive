@@ -93,7 +93,7 @@ const Page = () => {
   // console.log("showcase",unread)
   return (
     <>
-      <motion.div className='flex flex-col gap-8 p-4 font-[Poppins]'>
+      <motion.div className='flex flex-col gap-8 h-screen p-4 font-[Poppins]'>
 
         <div className='w-full text-xl '>Notification</div>
         {showCase.length > 0 && loader == false ? <motion.div initial={{ opacity: 0, x: -100 }}
