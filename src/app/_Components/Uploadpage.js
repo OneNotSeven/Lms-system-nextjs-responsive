@@ -655,7 +655,7 @@ console.log("tutututut",tutor)
                     drag and drop
                   </p> : null}
                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                    SVG, PNG, JPG or GIF (MAX. 800x400px)
+                    mp4,mkv videos (MAX. 1920x1080px)
                   </p> 
                 </div>
                 <input
