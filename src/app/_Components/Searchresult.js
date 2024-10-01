@@ -77,8 +77,8 @@ const Searchresult = ({ query }) => {
                             
                             
                             <Link key={idx} href={`/search/search?query=${item}`}>
-                            <div key={idx} className="relative rounded-2xl group cursor-pointer hover:bg-pink-400 flex gap-4 items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 group border-2 border-[#d42eeb]   hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-purple-800">
-                                <span className="relative px-5 py-1 text-center transition-all ease-in duration-75 text-[#d42eeb] dark:bg-gray-900 group-hover:text-white text-[12px] sm:text-[16px]  font-[Poppins]">
+                            <div key={idx} className="relative rounded-2xl group cursor-pointer hover:bg-pink-400 flex gap-4 items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 group border-2 border-[#d42eeb]   hover:text-white  focus:ring-4 focus:outline-none focus:ring-pink-200">
+                                <span className="relative px-5 py-1 text-center transition-all ease-in duration-75 text-[#d42eeb] group-hover:text-white text-[12px] sm:text-[16px]  font-[Poppins]">
                                     {item}
                                 </span>
                             </div>
