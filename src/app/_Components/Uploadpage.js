@@ -308,7 +308,7 @@ console.log("tutututut",tutor)
       <div className="w-full p-7 flex flex-col font-[Poppins]">
         <h5
           id="drawer-label"
-          className="inline-flex w-full gap-3 items-center mb-6 text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+          className="inline-flex w-full gap-3 items-center mb-6 text-base font-semibold text-gray-500 uppercase"
         >
           <Link href="/teachers/upload">
             <svg
@@ -336,7 +336,7 @@ console.log("tutututut",tutor)
           <div className="mb-6">
               <label
                 for="coursename"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 <span>course name</span>
               </label>
@@ -344,7 +344,7 @@ console.log("tutututut",tutor)
                 type="text" name="courseName"
                 value={values.courseName}
                 id="coursename"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="enter course name"
                 required
                 onChange= {handleChange}
@@ -357,7 +357,7 @@ console.log("tutututut",tutor)
             <div className="mb-6">
               <label
                 for="coursename"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 <span>course Description</span>
               </label>
@@ -365,7 +365,7 @@ console.log("tutututut",tutor)
                 type="text" name="courseDesc"
                 value={values.courseDesc}
                 id="coursename"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="enter course name"
                 required
                 onChange={handleChange}
@@ -378,7 +378,7 @@ console.log("tutututut",tutor)
             <div className="mb-6">
               <label
                 for="title"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 Chapter name
               </label>
@@ -386,7 +386,7 @@ console.log("tutututut",tutor)
                 type="text" name="chaptername"
                 value={values.chaptername}
                 id="title"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="Chapter 1: Gravity"
                 required
                 onChange={handleChange}
@@ -399,7 +399,7 @@ console.log("tutututut",tutor)
             <div className="mb-6">
               <label
                 for="title"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 Title
               </label>
@@ -407,7 +407,7 @@ console.log("tutututut",tutor)
                 type="text" name="title"
                 value={values.title}
                 id="title"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="Gravity"
                 required
                 onChange={handleChange}
@@ -422,7 +422,7 @@ console.log("tutututut",tutor)
             <div className="mb-6">
               <label
                 for="description"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 Description
               </label>
@@ -430,7 +430,7 @@ console.log("tutututut",tutor)
                 id="description" name="desc"
                 value={values.desc}
                 rows="4"
-                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Write a description..."
                 onChange={handleChange}
                 onBlur={handleBlur}
@@ -443,7 +443,7 @@ console.log("tutututut",tutor)
             <div>
               <label
                 htmlFor="default"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 price
               </label>
@@ -453,7 +453,7 @@ console.log("tutututut",tutor)
                   setPaymentOption(e.target.value);
                 }}
                 id="default"
-                className="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               >
                 <option selected>Select a Price</option>
                 <option value="Free">Free</option>
@@ -465,14 +465,14 @@ console.log("tutututut",tutor)
               <div>
                 <label
                   htmlFor="price"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-2 text-sm font-medium text-gray-900"
                 >
                   Enter your price (currency in INR)
                 </label>
                 <input
                   type="number"
                   id="price"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   placeholder="price"
                   onChange={(e)=>{setpriceset(e.target.value)}}
                 />
@@ -481,7 +481,7 @@ console.log("tutututut",tutor)
             <div className="mb-6">
               <label
                 for="title"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-gray-900"
               >
                 Tags
               </label>
@@ -489,7 +489,7 @@ console.log("tutututut",tutor)
                 type="text" name="tags"
                 value={values.tags}
                 id="title"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="Engineering"
                 required
                  onChange={handleChange}
@@ -507,7 +507,7 @@ console.log("tutututut",tutor)
               <label for="fileInput">
                 <div className="flex items-center justify-start p-4 gap-3 border-2 border-gray-400 border-dashed rounded-lg">
                   <svg
-                    className="w-6 h-6 text-gray-600 dark:text-gray-400"
+                    className="w-6 h-6 text-gray-600"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -521,7 +521,7 @@ console.log("tutututut",tutor)
                       d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                     />
                   </svg>
-                  <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">
+                  <p className="text-sm font-semibold text-gray-600">
                     Click to upload
                   </p>
                 </div>
@@ -567,7 +567,7 @@ console.log("tutututut",tutor)
                           }
                           setProgresses({});
                         }}
-                        className="w-6 h-6 text-gray-800 dark:text-white"
+                        className="w-6 h-6 text-gray-800"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -609,7 +609,7 @@ console.log("tutututut",tutor)
                     inputvideo.value=""
                     setvideoPro({});
                   }}
-                  className="w-6 h-6 text-gray-800 dark:text-white"
+                  className="w-6 h-6 text-gray-800"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -628,11 +628,11 @@ console.log("tutututut",tutor)
               </span>
               <label
                 for="dropzone-file"
-                className="flex relative overflow-hidden object-cover object-center flex-col items-center justify-center w-full md:w-[80%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
+                className="flex relative overflow-hidden object-cover object-center flex-col items-center justify-center w-full md:w-[80%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
               >
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <svg
-                    className="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
+                    className="w-8 h-8 mb-4 text-gray-500"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -650,7 +650,7 @@ console.log("tutututut",tutor)
                     <source src={videoUrl} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video> : null}
-                  {videoPro.pro != 100 ? <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                  {videoPro.pro != 100 ? <p className="mb-2 text-sm text-gray-500">
                     <span className="font-semibold">Click to upload</span> or
                     drag and drop
                   </p> : null}
@@ -679,7 +679,7 @@ console.log("tutututut",tutor)
 
               <label
                 for="dropzone-thumbfile"
-                className=" relative overflow-hidden object-cover object-center flex flex-col items-center justify-center w-full md:w-[80%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500"
+                className=" relative overflow-hidden object-cover object-center flex flex-col items-center justify-center w-full md:w-[80%] h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
               >
                 <svg class="w-16 h-16 text-gray-400 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-7 7V5"/>
@@ -699,7 +699,7 @@ console.log("tutututut",tutor)
                     inputthumb.value=""
                   setthumbPro({});
                 }}
-                className="w-6 h-6 text-gray-800 dark:text-white"
+                className="w-6 h-6 text-gray-800"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -745,7 +745,7 @@ console.log("tutututut",tutor)
 
         <button style={{background: 'linear-gradient(110deg, #e278ef, #ffa2f2)'}}  onClick={()=>{submitDetails()}}
           type="submit"
-          className="text-white mt-6 justify-center flex items-center bg-blue-700 hover:bg-blue-800 w-fit focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          className="text-white mt-6 justify-center flex items-center bg-[#d42eeb] hover:bg-blue-800 w-fit focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
         >
           <svg
             className="w-3.5 h-3.5 me-2.5"
