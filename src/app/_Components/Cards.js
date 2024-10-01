@@ -46,7 +46,7 @@ const Cards = () => {
             <h2 className='text-gray-500 font-semibold text-2xl pb-6'>
                 Watching Courses ({cart.length})
             </h2>
-            {cart.length > 0 ? < div className='flex flex-wrap gap-4'>
+            {cart.length > 0 ? < div className='flex flex-wrap justify-center gap-4'>
               {cart.map((item, idx) => (
                 <Link key={idx} href={`/courses/${item.courseId}/${item?.videosrc[0]?._id}`}  className='cursor-pointer' >
 
