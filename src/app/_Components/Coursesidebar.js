@@ -14,8 +14,8 @@ const Coursesidebar = ({ courselist, price,courseid,videoid }) => {
   return (
     <div className='w-full'>
 
-        { courselist?<aside id="logo-sidebar" className=" left-0 z-40 w-64 h-full pt-8 transition-transform -translate-x-full bg-white border-r border-gray-200 lg:translate-x-0 fixed top-0 lg:sticky lg:block dark:border-gray-700" aria-label="Sidebar">
-        <div className="h-full px-3 pb-4 overflow-y-auto dark:bg-gray-800">
+        { courselist?<aside id="logo-sidebar" className=" left-0 z-40 w-64 h-full pt-8 transition-transform -translate-x-full bg-white border-r border-gray-200 lg:translate-x-0 fixed top-0 lg:sticky lg:block" aria-label="Sidebar">
+        <div className="h-full px-3 pb-4 overflow-y-auto">
           <ul className="space-y-2 font-medium">
             <div className='flex gap-1 w-full text-[#d42eeb] rounded-lg'>
             <svg class="w-6 h-6 text-[#d42eeb] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -26,8 +26,8 @@ const Coursesidebar = ({ courselist, price,courseid,videoid }) => {
             <div className='flex flex-col gap-3 mt-3'>
 
             {courselist.map((items, idx) => (
-              <Link key={idx} href={price === "free" ? `/courses/${courseid}/${items._id}` : "#"} className="flex items-center text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <li className={`flex ${videoid==items._id?"bg-[#ffc0f7] text-[#fff]":"bg-none text-gray-600"} gap-1 p-1 w-full items-center hover:text-white rounded-lg dark:text-white hover:bg-[#ffc0f7] dark:hover:bg-gray-700 group`}>
+              <Link key={idx} href={price === "free" ? `/courses/${courseid}/${items._id}` : "#"} className="flex items-center text-gray-900 rounded-lg hover:bg-gray-100 group">
+                <li className={`flex ${videoid==items._id?"bg-[#ffc0f7] text-[#fff]":"bg-none text-gray-600"} gap-1 p-1 w-full items-center hover:text-white rounded-lg hover:bg-[#ffc0f7] group`}>
                   {price === "free" ? (
                     <svg class="w-6 h-6 text-gray-600 hover:text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor"strokeLinecap="round"strokeLinejoin="round"strokeWidth="2" d="M8 16.881V7.119a1 1 0 0 1 1.636-.772l5.927 4.881a1 1 0 0 1 0 1.544l-5.927 4.88A1 1 0 0 1 8 16.882Z"/>
