@@ -20,9 +20,12 @@ const LoginUser = () => {
     if ( Object.values(values).some(value=> value=="")) {
       toast.error("fill all details", {
         style: {
-          backgroundColor: 'black', // Set your desired background color
-          color: '#ffffff',        // Set your desired text color
-          fontFamily: 'Arial, sans-serif'  // Set your desired font
+          backgroundColor: 'white', // Set your desired background color
+          color: '#2b2b29',        // Set your desired text color
+          fontFamily: 'Arial, sans-serif',
+          progressStyle: {
+        background: '#d42eeb', // Change this to the desired color
+          }
         }
       })
     }
@@ -74,10 +77,10 @@ const LoginUser = () => {
   return (
     <>
       <div>
-        <section className="bg-white dark:bg-gray-900 font-[Poppins]">
+        <section className="bg-white font-[Poppins]">
           <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
             <div className="w-full max-w-md">
-              <h1 className="mt-3 text-2xl font-semibold text-gray-800 capitalize sm:text-3xl dark:text-white">
+              <h1 className="mt-3 text-2xl font-semibold text-gray-800 capitalize sm:text-3xl ">
                 sign In
               </h1>
 
@@ -86,7 +89,7 @@ const LoginUser = () => {
                   <span className="absolute">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500"
+                      className="w-6 h-6 mx-3 text-gray-300"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -102,7 +105,7 @@ const LoginUser = () => {
 
                   <input
                     type="email"
-                    className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Email address"
                     name="email"
                     value={values.email}
@@ -120,7 +123,7 @@ const LoginUser = () => {
                   <span className="absolute">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500"
+                      className="w-6 h-6 mx-3 text-gray-300"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -136,7 +139,7 @@ const LoginUser = () => {
 
                   <input
                     type="password"
-                    className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Password"
                     name="password"
                     value={values.password}
