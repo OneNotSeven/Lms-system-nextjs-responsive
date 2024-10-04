@@ -125,22 +125,22 @@ const Comment = ({ courseid,commentsList}) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="w-full dark:bg-gray-900 py-8 lg:py-16 antialiased"
+      className="w-full py-8 lg:py-16 antialiased"
     >
       <div className="max-w-2xl px-4 font-[Poppins]">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Discussion ({comments?.length || 0})</h2>
+          <h2 className="text-lg lg:text-2xl font-bold text-gray-900">Discussion ({comments?.length || 0})</h2>
         </div>
 
         {/* Comment Section */}
         {comments?.map((comment, index) => (
           <article
             key={index}
-            className={`p-6 mb-3 text-base bg-white rounded-lg dark:bg-gray-900 ${index === comments.length - 1 ? '' : 'border-t border-gray-200 dark:border-gray-700'}`}
+            className={`p-6 mb-3 text-base bg-white rounded-lg ${index === comments.length - 1 ? '' : 'border-t border-gray-200'}`}
           >
             <footer className="flex justify-between items-center mb-2">
               <div className="flex items-center">
-                <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
+                <p className="inline-flex items-center mr-3 text-sm text-gray-900 font-semibold">
                   <img
                     className="mr-2 w-6 h-6 rounded-full"
                     src={comment.profilePicture}
@@ -148,7 +148,7 @@ const Comment = ({ courseid,commentsList}) => {
                   />
                  <span className='truncate'>{comment.name}</span> 
                 </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-600">
                   <time pubdate dateTime={comment.dateTime} title={comment.dateTimeTitle}>
                     {comment.date}
                   </time>
@@ -157,7 +157,7 @@ const Comment = ({ courseid,commentsList}) => {
               <button
                 onClick={() => handleDropdownToggle(`dropdownComment${index}`)}
                 aria-expanded={activeDropdown === `dropdownComment${index}`}
-                className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 dark:text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-500 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50"
                 type="button"
               >
                 <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
@@ -166,14 +166,14 @@ const Comment = ({ courseid,commentsList}) => {
                 <span className="sr-only">Comment settings</span>
               </button>
               {activeDropdown === `dropdownComment${index}` && (
-                <div className="absolute z-10 w-36 right-48 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <div className="absolute z-10 w-36 right-48 bg-white rounded divide-y divide-gray-100 shadow">
                   <ul className="py-1 text-sm text-gray-700 dark:text-gray-200">
                     <li>
                       {userid == comment.userId ?
                       
                       <button
                         onClick={() => handleCommentDelete(index)}
-                        className="block py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        className="block py-2 px-4 w-full hover:bg-gray-100"
                       >
                          Remove
                         </button>
@@ -183,7 +183,7 @@ const Comment = ({ courseid,commentsList}) => {
                     {userid != comment.userId ?
                     
                     <li>
-                      <a href="#" className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                      <a href="#" className="block py-2 px-4 hover:bg-gray-100">Report</a>
                       </li>
                       :null
                   }
@@ -191,9 +191,9 @@ const Comment = ({ courseid,commentsList}) => {
                 </div>
               )}
             </footer>
-            <p className="text-gray-500 dark:text-gray-400">{comment.text}</p>
+            <p className="text-gray-500">{comment.text}</p>
             <div className="flex items-center mt-4 space-x-4">
-              <button type="button" className="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400 font-medium">
+              <button type="button" className="flex items-center text-sm text-gray-500 hover:underline font-medium">
                 <svg className="mr-1.5 w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"/>
                 </svg>
