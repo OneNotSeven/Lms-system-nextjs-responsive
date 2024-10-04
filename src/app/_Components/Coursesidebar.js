@@ -18,10 +18,10 @@ const Coursesidebar = ({ courselist, price,courseid,videoid }) => {
         <div className="h-full px-3 pb-4 overflow-y-auto">
           <ul className="space-y-2 font-medium">
             <div className='flex gap-1 w-full text-[#d42eeb] rounded-lg'>
-            <svg class="w-6 h-6 text-[#d42eeb] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-[#d42eeb]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
   <path fill-rule="evenodd" d="M5 6a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Zm0 12a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Zm1.65-9.76A1 1 0 0 0 5 9v6a1 1 0 0 0 1.65.76l3.5-3a1 1 0 0 0 0-1.52l-3.5-3ZM12 10a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2h-5a1 1 0 0 1-1-1Zm0 4a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2h-5a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
 </svg>
-<span>All Playlist</span>
+<span className="font-[Poppins]">All Playlist</span>
             </div>
             <div className='flex flex-col gap-3 mt-3'>
 
