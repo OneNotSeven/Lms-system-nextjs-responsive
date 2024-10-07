@@ -223,7 +223,7 @@ const Page = () => {
                       </div>
                     </div>
                     <p className="text-muted-foreground">
-                      Thanks to the wide range of courses available on this platform, I've been able to enhance my skills 
+                      Thanks to the wide range of courses available on this platform, I have been able to enhance my skills 
                       and stay ahead in my field. I highly recommend it to anyone aiming to grow in their career.
                     </p>
                   </div>
