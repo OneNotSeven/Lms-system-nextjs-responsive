@@ -152,8 +152,7 @@ const Page = () => {
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Accelerate Your Learning</h3>
                   <p className="text-muted-foreground">
-                    Our platform help you learn faster and more effectively, with interactive lessons and
-                    personalized feedback.
+                    Our platform enables you to learn faster and more efficiently, offering interactive lessons and personalized feedback to enhance your learning experience.
                   </p>
                 </div>
               </div>
@@ -165,7 +164,7 @@ const Page = () => {
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Accessible Anytime, Anywhere</h3>
                   <p className="text-muted-foreground">
-                    Learn on the go with our desktop friendly platform, available 24/7 to fit your busy schedule.
+                    Learn anytime, anywhere with our platform, designed to be both desktop and mobile-friendly. Available 24/7 to accommodate your busy lifestyle.
                   </p>
                 </div>
               </div>
@@ -208,8 +207,8 @@ const Page = () => {
                       </div>
                     </div>
                     <p className="text-muted-foreground">
-                      The e-learning platform has been a game-changer for me. The courses are engaging, the
-                      instructors are knowledgeable, and the flexibility has allowed me to learn at my own pace.
+                      The e-learning platform has had a significant impact on my learning journey. 
+                      The courses are highly interactive, the instructors are experts in their fields, and the flexibility it offers has enabled me to progress at a pace that suits my schedule.
                     </p>
                   </div>
                   <div className="grid gap-2 rounded-lg bg-background p-4">
@@ -224,8 +223,8 @@ const Page = () => {
                       </div>
                     </div>
                     <p className="text-muted-foreground">
-                      I have been able to upskill and stay ahead of the curve thanks to the diverse course offerings on
-                      this platform.Highly recommended for anyone looking to advance their career.
+                      Thanks to the wide range of courses available on this platform, I've been able to enhance my skills 
+                      and stay ahead in my field. I highly recommend it to anyone aiming to grow in their career.
                     </p>
                   </div>
                 </div>
@@ -244,8 +243,9 @@ const Page = () => {
                       </div>
                     </div>
                     <p className="text-muted-foreground">
-                      The e-learning platform has been a game-changer for me. The courses are engaging, the
-                      instructors are knowledgeable, and the flexibility has allowed me to learn at my own pace.
+                      The e-learning platform has truly transformed my learning experience. The courses are captivating, 
+                      the instructors bring deep expertise, and the flexibility has empowered me to progress at a pace that
+                      works best for me.
                     </p>
                   </div>
                   <div className="grid gap-2 rounded-lg bg-background p-4">
@@ -260,8 +260,8 @@ const Page = () => {
                       </div>
                     </div>
                     <p className="text-muted-foreground">
-                      I have been able to upskill and stay ahead of the curve\n thanks to the diverse course offerings on
-                      this platform. Highly recommended for anyone looking to advance their career.
+                      I have been able to enhance my skills and stay ahead in my field, 
+                        thanks to the wide variety of courses available on this platform. I highly recommend it to anyone looking to boost their career development.
                     </p>
                   </div>
                 </div>
@@ -274,7 +274,7 @@ const Page = () => {
         <div class="space-y-4">
       <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl">Get in Touch</h2>
       <p class="text-gray-600">
-        Fill out the form below and we will get back to you as soon as possible.
+        Please complete the form below, and we will respond to you promptly.
       </p>
       <div class="space-y-4">
         <div class="grid grid-cols-2 gap-4">
