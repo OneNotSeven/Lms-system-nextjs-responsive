@@ -189,7 +189,7 @@ const Page = () => {
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Testimonials</div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">What Our Students Say</h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Hear from our satisfied students about their experiences with our e-learning platform.
+                Discover what our satisfied students have to say about their experiences with our e-learning platform.
               </p>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
