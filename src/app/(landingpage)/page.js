@@ -207,8 +207,7 @@ const Page = () => {
                       </div>
                     </div>
                     <p className="text-muted-foreground">
-                      The e-learning platform has had a significant impact on my learning journey. 
-                      The courses are highly interactive, the instructors are experts in their fields, and the flexibility it offers has enabled me to progress at a pace that suits my schedule.
+                      The e-learning platform has greatly influenced my learning experience. The courses are interactive, the instructors are highly skilled, and the flexible structure allows me to advance at a pace that fits my personal schedule.
                     </p>
                   </div>
                   <div className="grid gap-2 rounded-lg bg-background p-4">
