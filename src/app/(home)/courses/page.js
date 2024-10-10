@@ -4,7 +4,7 @@ import Cards from '@/app/_Components/Cards'
 import Enrolledcard from '@/app/_Components/Enrolledcard'
 
 
-const page = () => {
+const Page = () => {
   const [change, setchange] = useState("")
   
   return (
@@ -23,4 +23,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
