@@ -13,6 +13,7 @@ import Enroll from '@/app/_Components/Enroll';
 
 const Page = ({ params }) => {
   const [items, setItems] = useState({});
+  const [isExpanded, setIsExpanded] = useState(false);
   const [link, setLink] = useState('');
   const [activeTab, setActiveTab] = useState(1);
   const [sideList, setSideList] = useState([]);
@@ -80,7 +81,8 @@ const Page = ({ params }) => {
             thumbnail: sideRes.message[0].thumbnail,
             courseId: sideRes.message[0].courseId,
             userId: sideRes.message[0].userId,
-            videoid: params.coursename[1]
+            videoid: params.coursename[1],
+            courseDesc:sideRes.message[0].courseDesc
           });
           setcomments(sideRes.message[0].comments)
           setattachmentList(sideRes.message[0].fileattachment)
@@ -167,8 +169,8 @@ const Page = ({ params }) => {
       </motion.div>
       <div className='flex w-full lg:flex-row flex-col-reverse'>
         
-      <div className="flex flex-col justify-center items-center relative gap-6 w-full p-4">
-      {price=="free"? null:<motion.div initial={{ opacity: 0,scale:0, y: 20 }}
+      <div className="flex flex-col custom-scrollbar h-screen overflow-auto items-center relative gap-6 w-full p-4">
+      {price!="free" && <motion.div initial={{ opacity: 0,scale:0, y: 20 }}
                     animate={{ opacity: 1,scale:1, y: 0 }}
                     transition={{ duration:1, ease: 'easeOut' }} className="bg-[#ffffc3] hidden lg:block rounded-xl w-full text-[#cbaa01] py-3 px-4 md:px-6 items-center justify-between">
       <div className="flex items-center gap-2">
@@ -187,9 +189,6 @@ const Page = ({ params }) => {
         >
           <motion.div
             className="relative rounded-lg overflow-hidden"
-            // initial={{ opacity: 0 }}
-            // animate={{ opacity: 1 }}
-            // transition={{ duration: 0.5 }}
           >
            
               {link ? (
@@ -219,72 +218,22 @@ const Page = ({ params }) => {
               </motion.div>
             )}
           </motion.div>
-          <div>
-            <ul className="flex p-6 gap-3 justify-evenly items-center font-[Poppins]">
-              <li className="flex gap-1 truncate w-[96px] sm:w-fit text-[14px] sm:text-[16px]">
-                <svg
-                  className="w-[50%] sm:w-6 sm:h-6 text-gray-600"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  />
-                </svg>
-                  <span className="lg:font-semibold text-gray-500 truncate">{ enrollDetails?.title}</span>
-                  
-              </li>
-              <li className="flex gap-1 truncate text-[14px] sm:text-[16px]">
-                <svg
-                  className=" w-5 sm:w-6 sm:h-6 text-gray-600"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M8 7H5a2 2 0 0 0-2 2v4m5-6h8M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m0 0h3a2 2 0 0 1 2 2v4m0 0v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6m18 0s-4 2-9 2-9-2-9-2m9-2h.01"
-                  />
-                </svg>
-                <span className=" lg:font-semibold text-gray-500 truncate">Beginner</span>
-              </li>
-              <li className="flex gap-1 truncate text-[14px] sm:text-[16px]">
-                <svg
-                  className="w-5 sm:w-6 sm:h-6 text-gray-600"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m8.032 12 1.984 1.984 4.96-4.96m4.55 5.272.893-.893a1.984 1.984 0 0 0 0-2.806l-.893-.893a1.984 1.984 0 0 1-.581-1.403V7.04a1.984 1.984 0 0 0-1.984-1.984h-1.262a1.983 1.983 0 0 1-1.403-.581l-.893-.893a1.984 1.984 0 0 0-2.806 0l-.893.893a1.984 1.984 0 0 1-1.403.581H7.04A1.984 1.984 0 0 0 5.055 7.04v1.262c0 .527-.209 1.031-.581 1.403l-.893.893a1.984 1.984 0 0 0 0 2.806l.893.893c.372.372.581.876.581 1.403v1.262a1.984 1.984 0 0 0 1.984 1.984h1.262c.527 0 1.031.209 1.403.581l.893.893a1.984 1.984 0 0 0 2.806 0l.893-.893a1.985 1.985 0 0 1 1.403-.581h1.262a1.984 1.984 0 0 0 1.984-1.984V15.7c0-.527.209-1.031.581-1.403Z"
-                  />
-                </svg>
-                <Link href={`/teacherprofile/${tutorId}`}>
-                  <span className=" lg:font-semibold text-gray-500 capitalize hover:text-green-500 truncate">{tutor}</span>
-                </Link>
-              </li>
-            </ul>
+          
+          <div className='mt-3 mb-2'>
+          <span className='font-[Poppins] font-semibold sm:text-[24px]'>A course by</span>  <Link href={`/teacherprofile/${tutorId}`}>
+                  <span className=" sm:text-[24px] font-semibold font-[Poppins] text-[#d42eeb] capitalize hover:text-green-500 truncate">{tutor}</span>
+              </Link>
+              <div className="max-w-full font-[Poppins] ">
+      <p className={`text-gray-600 ${isExpanded ? '' : 'line-clamp-3'}`}>
+        {enrollDetails?.courseDesc}
+      </p>
+      <button
+        className="text-[#d42eeb]  mt-2"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        {isExpanded ? 'Show Less' : '... Show More'}
+      </button>
+    </div>
           </div>
 
           <motion.div
@@ -387,8 +336,11 @@ const Page = ({ params }) => {
             {activeTab === 3 && <Comment courseid={params.coursename[0]} commentsList={ commentsArr} />}
         </motion.div>
 
-      </div>
+        </div>
+        
+
         {enrollDetails && <Enroll enroll={enrollDetails} />}
+       
 </div>
     </>
   );
