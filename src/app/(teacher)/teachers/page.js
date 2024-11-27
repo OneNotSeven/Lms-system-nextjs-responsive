@@ -101,6 +101,15 @@ const AdminPage = () => {
     {/* RIGHT */}
     <div className="w-full lg:w-1/3 flex flex-col gap-8">
       <h2 className="text-lg font-semibold font-[Poppins] text-gray-600">Todays Events</h2>
+ {events?.length == 0 ? <div className="w-[200px] h-[200px]">
+
+               <div className="flex flex-col gap-4"><img src="/calender.png" />
+              <span>No Events For Today</span>
+              </div> 
+                
+
+
+            </div>:null}
       {
         events.map((items,idx) => (
           <div key={idx} className="flex sm:flex-row flex-col gap-4 font-[Poppins]">
