@@ -3,6 +3,7 @@ import FinanceChart from "@/app/_Components/FinanceChart";
 import "@/app/global.css"
 import { appBaseUrl } from "@/schema/appurl";
 import axios from "axios";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 
@@ -103,7 +104,7 @@ const AdminPage = () => {
       <h2 className="text-lg font-semibold font-[Poppins] text-gray-600">Todays Events</h2>
  {events?.length == 0 ? <div className="w-[200px] h-[200px]">
 
-               <div className="flex flex-col gap-4"><img src="/calender.png" />
+               <div className="flex flex-col gap-4"><Image src="/calender.png" width={200} height={200}  />
               <span>No Events For Today</span>
               </div> 
                 
